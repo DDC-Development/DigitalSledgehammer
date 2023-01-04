@@ -4,8 +4,8 @@
 
 // Preprocessor statements
 #include <string>
-#include <iostream> // Don't expect to see using namespace std; here, I think I'd
-                    // rather poke my eyes out with sharp sticks...
+#include <iostream>
+#include <sstream>
 #include "../lib/io.h"
 #include "../lib/header-functions.h"
 
@@ -31,18 +31,8 @@ void echoFunction(const std::string& userinput)
 // a function to clear the screen
 void clearFunction(const std::string& userinput)
 {
-    // if the user sent us something
-    if (userinput.length() >0)
-    {
-        // tell them not to
-        std::cout << "Could not find definition for argument: " + userinput + ", please try again with no arguments." << std::endl;     
-    }
-    // if not, let's continue
-    else
-    {
-        // let's clear the screen
-        DS_CLEAR_SCREEN
-    }
+    // Clear screen – obviously
+    DS_CLEAR_SCREEN
 }
 
 // a function to exit the program (why would you want to exit?? is this program not good enough for you?????)
@@ -51,12 +41,20 @@ void exitFunction(const std::string& userinput)
     // if the user sent us something
     if (userinput.length() > 0)
     {
-        // tell them not to
-        std::cout << "Could not find definition for argument: " + userinput + ", please try again with no arguments." << std::endl;     
-        // Debugging tool
-        std::cout << "You entered: " + userinput + " as an argument." << std::endl;   
+        //... then let's have a look at whether or not it's a number
+        if (DoesStringContainOnlyDigits(userinput))
+        {
+            // if it is a number, we'll exit with that as the exit code
+            std::stringstream ss;
+            ss << userinput;
+            int returncode;
+            ss >> returncode;
+            exit(returncode);
+        }
+        // if it doesn't, then it's just some garbage string that we can ignore
+        else;
     }
-    // if not, let's continue
+    // if there is no input, let's just exit
     else
     {
         // exit the program

@@ -19,3 +19,9 @@ bool CheckKeyExistsInMap(std::unordered_map<std::string, std::function<void(cons
     }
     return true;
 }
+
+// See if a string is comprised only of digits
+bool DoesStringContainOnlyDigits(const std::string &InputString)
+{
+    return InputString.find_first_not_of("0123456789") == std::string::npos;
+}
