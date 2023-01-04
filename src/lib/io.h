@@ -32,3 +32,13 @@ public:
         return input;
     }
 };
+
+// Replacement for DS_IO.kscanf()
+// We don't need a replacement for kprintf, just use std::cout
+std::string PromptUserForInput(std::string prompt = "$")
+{
+    std::string input;
+    std::cout << prompt;
+    std::getline(std::cin, input);
+    return input;
+}
