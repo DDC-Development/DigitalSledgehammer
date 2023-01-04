@@ -14,8 +14,11 @@ When it starts to do more, I'll be sure to add some docs to the project (probabl
 # How to compile
 
 Note that these instructions are linux-only – see You Will Need (Compiling)
-Clone the directory with `git clone https://github.com/DDC-Development/Digital-Sledgehammer.git && cd DigitalSledgehammer/`<br/>
-Run the HostSetup file to prepare your computer: `sudo ./HostSetup`. Make sure to use `sudo` or you will recieve an error.<br/>
+
+Clone the directory with `git clone https://github.com/DDC-Development/Digital-Sledgehammer.git && cd DigitalSledgehammer/`.
+
+Run the HostSetup file to prepare your computer: `sudo ./HostSetup`. Make sure to use `sudo` or you will recieve an error.
+
 Compile with `make`.
 
 # How to Run
