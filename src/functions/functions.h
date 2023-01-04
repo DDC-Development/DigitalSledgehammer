@@ -49,7 +49,7 @@ void clearFunction(const std::string& userinput)
 void exitFunction(const std::string& userinput)
 {
     // if the user sent us something
-    if (userinput.length() >0)
+    if (userinput.length() > 0)
     {
         // tell them not to
         io.kprintf("Could not find definition for argument: " + userinput + ", please try again with no arguments.");       
