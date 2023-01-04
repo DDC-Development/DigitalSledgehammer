@@ -9,9 +9,7 @@
 #include "../lib/io.h"
 #include "../lib/header-functions.h"
 
-// Initialisation of IO class
-// @deprecated
-DS_IO io;
+
 // A simple echo function
 void echoFunction(const std::string& userinput)
 {
@@ -19,11 +17,12 @@ void echoFunction(const std::string& userinput)
     if (userinput.length() > 0)
     {
         // Let's print the text the user gave us
-        io.kprintf(userinput);
+        std::cout << userinput << std::endl;
     }
+    // if not...
     else
     {
-        // Then let's not try and print anything, or we'll crash stuff
+        // ...Then let's not try and print anything, or we'll crash stuff
         // which is obviously bad
         return;
     }
@@ -36,7 +35,7 @@ void clearFunction(const std::string& userinput)
     if (userinput.length() >0)
     {
         // tell them not to
-        io.kprintf("Could not find definition for argument: " + userinput + ", please try again with no arguments.");     
+        std::cout << "Could not find definition for argument: " + userinput + ", please try again with no arguments." << std::endl;     
     }
     // if not, let's continue
     else
@@ -53,15 +52,15 @@ void exitFunction(const std::string& userinput)
     if (userinput.length() > 0)
     {
         // tell them not to
-        io.kprintf("Could not find definition for argument: " + userinput + ", please try again with no arguments.");       
+        std::cout << "Could not find definition for argument: " + userinput + ", please try again with no arguments." << std::endl;     
         // Debugging tool
-        io.kprintf("You entered: " + userinput + " as an argument.");        
+        std::cout << "You entered: " + userinput + " as an argument." << std::endl;   
     }
     // if not, let's continue
     else
     {
         // exit the program
-        io.kprintf("exit"); // a smol UI note
+        std::cout << "exit" << std::endl; // a smol UI note
         exit(2); // Exit 2 error code is for a manual shutdown
     }
 }

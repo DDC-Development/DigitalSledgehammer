@@ -5,13 +5,9 @@
 #include "lib/io.h"
 #include "ds.h"
 #include "lib/header-functions.h"
+#include "lib/io.h"
 
 #include <iostream>
-
-// IO class definition
-// @deprecated
-DS_IO ds_io;
-
 
 // The good-old-fashioned main
 int main()
@@ -28,11 +24,9 @@ int main()
     while (true)
     {
         // Isolate the command name, and args
-        
-        // Prompt
-        std::cout << ">>>";
+        input = PromptUserForInput(">>>");
         // Get a command as input
-        std::getline(std::cin, input);
+        
         // Find the first space
         size_t SpacePosition = input.find(" ");
         // If it's a valid position...    
@@ -68,10 +62,9 @@ int main()
         // if not...
         else
         {
-            // ... maybe they made a mistake? I don't know, either way,
-            // tell them what they've done
-            // @deprecated
-            ds_io.kprintf("Command not found: \"" + CommandName + "\". Please check your spelling and try again, or use \"help\" to display commands.");
+            // ... maybe they made a mistake? I don't know. Either way,
+            // tell them what they've done.
+            std::cout << "Command not found: \"" + CommandName + "\". Please check your spelling and try again, or use \"help\" to display commands." << std::endl;
         }
     }
 }
