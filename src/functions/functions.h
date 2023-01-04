@@ -10,6 +10,7 @@
 #include "../lib/header-functions.h"
 
 // Initialisation of IO class
+// @deprecated
 DS_IO io;
 // A simple echo function
 void echoFunction(const std::string& userinput)

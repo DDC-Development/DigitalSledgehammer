@@ -9,6 +9,7 @@
 #include <iostream>
 
 // IO class definition
+// @deprecated
 DS_IO ds_io;
 
 
@@ -69,6 +70,7 @@ int main()
         {
             // ... maybe they made a mistake? I don't know, either way,
             // tell them what they've done
+            // @deprecated
             ds_io.kprintf("Command not found: \"" + CommandName + "\". Please check your spelling and try again, or use \"help\" to display commands.");
         }
     }

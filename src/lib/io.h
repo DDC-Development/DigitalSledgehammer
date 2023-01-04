@@ -7,6 +7,7 @@
 #pragma once
 
 // Digital Sledgehammer IO class
+// @deprecated
 class DS_IO
 {
 private:
