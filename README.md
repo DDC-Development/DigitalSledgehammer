@@ -1,7 +1,6 @@
 # Welcome to Digital Sledgehammer
 
-This tool is a simple Command Line tool (a bit similar to Windows CMD or bash), that doesn't really do much now.
-When it starts to do more, I'll be sure to add some docs to the project (probably in `root/docs`)
+This tool is a simple Command Line tool (a bit similar to Windows CMD or bash), that doesn't really do much now, but you can view its current features along with helpful guides for the user and developer, in `root/docs`.
 
 
 # You Will Need (Compiling)
