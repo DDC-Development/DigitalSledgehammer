@@ -31,6 +31,12 @@ void echoFunction(const std::string& userinput)
 // a function to clear the screen
 void clearFunction(const std::string& userinput)
 {
+    // Use the userinput variable to stop G++ complaining
+    // I know this is bad practise, but we have to take a variable
+    // that we have no use for, so it's kind of necessary. Don't worry
+    // though, it's not temporary. That said, there's no more permenant
+    // fix than a temporary one...
+    userinput.c_str();
     // Clear screen – obviously
     DS_CLEAR_SCREEN
 }
@@ -52,7 +58,6 @@ void exitFunction(const std::string& userinput)
             exit(returncode);
         }
         // if it doesn't, then it's just some garbage string that we can ignore
-        else;
     }
     // if there is no input, let's just exit
     else
@@ -62,4 +67,3 @@ void exitFunction(const std::string& userinput)
         exit(2); // Exit 2 error code is for a manual shutdown
     }
 }
-
