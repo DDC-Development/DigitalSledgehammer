@@ -2,6 +2,9 @@
 
 This tool is a simple Command Line tool (a bit similar to Windows CMD or bash), that doesn't really do much now, but you can view its current features along with helpful guides for the user and developer, in `root/docs`.
 
+# Next planned function
+
+The next feature that is planned to be added to Digital Sledgehammer is: ``. Note that this may not always be the next feature, as emergency patches and other things may not always be planned.
 
 # You Will Need (Compiling)
 - A Linux Computer
