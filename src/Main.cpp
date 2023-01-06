@@ -19,7 +19,7 @@ int main()
     std::string input;
     std::string CommandName;
     std::string args;
-    
+
     // Main loop
     while (true)
     {
